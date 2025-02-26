@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: black;
+}
+
+section {
+        width: 90%;
+        max-width: 1400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+}
+.container {
+        width: 72rem;
+        background-color: #1b252a;
+        padding: 30px 30px;
+        border-radius: 15px;
+        border: 3px solid #55f8e9;
+        box-shadow: rgba(222, 238, 42, 0.1) 0px 4px 6px;
+        position: relative;
+        
+}
+.container:after{
+        content: " ";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        width: 70%;
+        height: 15px;
+        background-image : linear-gradient(to right, #55f8e9,#f005b1);
+        transform: translate(-50%, 0);
+        border-radius: 3px 3px 8px 8px;
+      
+}
+.container:before{
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 10px;
+        background-image : linear-gradient(to right, #55f8e9,#f005b1);
+        bottom: -25px;
+        left: -5%;
+        border-radius: 100%;
+        filter: blur(5px);
+  
+}
+.time {
+  text-align: center;
+  font-size: 6rem;
+  color:white;
+  margin-bottom: 30px;
+}
+.actions{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:1rem;
+  margin-bottom: 10px;
+  
+}
+.actions button{
+  background:#f005b1;
+  color:white;
+  padding: 12px 18px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: all 1s ease;
+  
+}
+button:hover{
+  background: transparent;
+  border: 1px solid #f005b1;
+  scale: 1.03;
+}
+.clearTime {
+  grid-column: 1 / -1;
+}
+.show {
+  color:white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center
+}
+
+@media (width <= 768px) {
+  section {
+    max-width: 480px;
+    width:100%;
+    
+  }
+  html {
+    font-size: 60%;
+  }
+  .container {
+    width:32rem;
+    padding: 15px 10px;
+  }
+  .time {
+    font-size: 5rem;
+  }
+  button{
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
